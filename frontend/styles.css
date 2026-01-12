@@ -1,0 +1,102 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== ADMIN PANEL CONTAINER ===== */
+.admin-panel {
+  width: 420px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  animation: slideFade 1s ease;
+}
+
+@keyframes slideFade {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== TITLE ===== */
+.admin-panel h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #2c5364;
+  font-weight: 600;
+}
+
+.admin-panel p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #777;
+}
+
+/* ===== INPUTS ===== */
+.admin-panel input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.admin-panel input:focus {
+  border-color: #2c5364;
+  outline: none;
+}
+
+/* ===== BUTTONS ===== */
+.admin-panel button {
+  width: 100%;
+  background: linear-gradient(135deg, #2c5364, #203a43);
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.admin-panel button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== STATUS TEXT ===== */
+#msg {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 480px) {
+  .admin-panel {
+    width: 90%;
+    padding: 30px;
+  }
+}

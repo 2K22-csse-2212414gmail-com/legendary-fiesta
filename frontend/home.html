@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar Crater & Boulder Detection</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.9;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* SCROLLING BANNER */
+.scrolling-text {
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* MAIN CONTENT */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* CARD SECTIONS */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffd369;
+}
+
+.card p {
+    font-size: 1rem;
+    opacity: 0.95;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* IMAGES */
+.image-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.image-box img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .card h2 {
+        font-size: 1.6rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>LUNAR CRATER & BOULDER DETECTION</h1>
+    <p>
+        Automated Detection of Lunar Surface Features using YOLOv8, YOLO-NAS & High-Resolution OHRC Images from ISRO’s Chandrayaan-2
+    </p>
+</div>
+
+<!-- SCROLLING TEXT -->
+<div class="scrolling-text">
+    <span>🚀 YOLOv8 Object Detection | Deep Learning | Space Vision | ISRO Dataset 🚀</span>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <!-- ABSTRACT -->
+    <div class="card">
+        <h2>ABSTRACT</h2>
+        <p>
+        This work investigates the automated detection of lunar craters and boulders using advanced Computer Vision (CV) techniques, specifically leveraging the YOLOv11 and YOLO-NAS object detection models on high-resolution images from ISRO’s Chandrayaan-2 Orbiter High-Resolution Camera (OHRC).
+        </p>
+        <p>
+        The study focuses on training deep learning models, evaluating mean Average Precision (mAP), and optimizing detection accuracy for planetary exploration and mission planning.
+        </p>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <div class="card">
+        <h2>INTRODUCTION</h2>
+        <p>
+        With the development of science and technology, space probes capture massive planetary images that provide valuable geological insights. Detecting craters and boulders automatically is essential for understanding impact history, landing site selection, and surface evolution.
+        </p>
+        <p>
+        Single-stage object detection models like YOLO offer high-speed detection with strong accuracy, making them ideal for large-scale planetary image analysis.
+        </p>
+    </div>
+
+    <!-- IMAGE SECTION -->
+    <div class="card">
+        <h2>LUNAR SURFACE SAMPLE</h2>
+
+        <div class="image-box">
+            <img src="https://www.mdpi.com/remotesensing/remotesensing-13-03776/article_deploy/html/images/remotesensing-13-03776-g001.png" alt="Lunar Surface">
+        </div>
+
+        <p style="margin-top:20px;">
+            The most fundamental elements of space surfaces are craters and boulders. Craters result from meteor impacts, while boulders originate from erosion, landslides, and surface fragmentation processes.
+        </p>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2025 Lunar Detection Project | Designed by Vedant Shukla
+</div>
+
+</body>
+</html>

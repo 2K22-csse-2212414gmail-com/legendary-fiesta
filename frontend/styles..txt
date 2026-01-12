@@ -1,0 +1,149 @@
+*{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:"Helvetica, sans-serif,poppins";
+    color: #333;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+    --font-color: #333;
+}
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    text-align:center;
+    font-family: "franklin gothic medium", "arial narrow", Arial, sans-serif;
+}
+::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+section {
+    margin-bottom: 20px;
+    height:100vh;
+    scroll-margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgb(240, 240, 240);
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.email-setup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.email-setup-form input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.email-setup-form button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.email-setup-form button:hover {
+    background-color: #45a049;
+}
+.success-message {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 10px;
+}
+.email-setup-form .error-message {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 10px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.email-setup-form .error-message {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn-submit {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    letter-spacing: normal;
+    color: var(--font-color);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    &:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+    background-color: #fff;
+    &::placeholder {
+        color: #bbb;
+        font-style: italic;
+    }
+}

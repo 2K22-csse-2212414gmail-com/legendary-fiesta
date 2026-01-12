@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin OTP Verification</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --primary: #4CAF50;
+  --dark: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #000, #eee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.header button {
+  padding: 8px 14px;
+  margin-right: 5px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  background: #fff;
+  width: 360px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--dark);
+}
+
+#msg {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success { color: green; }
+.error { color: red; }
+
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <button onclick="location.href='home.html'">Home</button>
+  <button onclick="location.href='about.html'">About</button>
+</div>
+
+<div class="container">
+  <h1>Admin Login</h1>
+
+  <input type="email" id="email" placeholder="Enter email">
+  <button onclick="sendOtp()">Send OTP</button>
+
+  <input type="text" id="otp" placeholder="Enter OTP">
+  <button onclick="verifyOtp()">Verify OTP</button>
+
+  <button onclick="openML()">🚀 Launch Detection Model</button>
+
+  <p id="msg"></p>
+
+  <div class="footer">Secure Admin Panel | Major Project</div>
+</div>
+
+<script>
+let generatedOTP = "";
+
+function sendOtp() {
+  const email = document.getElementById("email").value;
+  const msg = document.getElementById("msg");
+
+  if (!email) {
+    msg.textContent = "Please enter email";
+    msg.className = "error";
+    return;
+  }
+
+  generatedOTP = Math.floor(100000 + Math.random() * 900000);
+  console.log("OTP (demo):", generatedOTP);
+
+  msg.textContent = "OTP sent (demo: check console)";
+  msg.className = "success";
+}
+
+function verifyOtp() {
+  const otp = document.getElementById("otp").value;
+  const msg = document.getElementById("msg");
+
+  if (otp == generatedOTP) {
+    msg.textContent = "OTP verified successfully!";
+    msg.className = "success";
+  } else {
+    msg.textContent = "Invalid OTP";
+    msg.className = "error";
+  }
+}
+
+function openML() {
+  window.open("http://localhost:8501", "_blank");
+}
+</script>
+
+</body>
+</html>
